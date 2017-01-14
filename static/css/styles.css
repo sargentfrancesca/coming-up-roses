@@ -1,0 +1,73 @@
+.navbar, .navbar-default {
+/*	display: none;*/
+	background: #fff0ed;
+	border: 0px;
+}
+
+body {
+	font-family: "niveau-grotesk",sans-serif;
+}
+
+.jumbotron h1, h1, h2, h3, h4 {
+	font-family: "blue-goblet",fantasy;
+	color: #CE5374;
+}
+
+a {
+	color: #C12661;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #DA7B28;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #CE5374;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #DA7B28;
+}
+
+span.pink {
+	color: #FF6978;
+}
+
+.jumbotron {
+	background: #ffffff;
+}
+
+.navbar-default .navbar-toggle {
+	border: 0px;
+	color: white;
+	background: #CE5374;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background: #DA7B28;
+}
+
+.navbar-default .navbar-toggle:active {
+	background: #DA7B28;
+}
+
+.navbar-default .navbar-toggle:focus {
+	background: #CE5374 !important;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: 0px;
+}
+
+.intro {
+	background: #fff0ed;
+}
+
+.feature-columns>.btn {
+	border: 0;
+	background: #CE5374;
+	color: white;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}

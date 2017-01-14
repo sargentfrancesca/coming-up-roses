@@ -9,13 +9,18 @@ DEBUG = True
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
+        "ENGINE": "django.contrib.gis.db.backends.mysql",
+        "NAME": "roses",
+        "USER" : 'root',
+        "PASSWORD" : 'sincynk1988',
+        "HOST" : 'localhost'
     }
 }
 
 ALLOWED_HOSTS = [
     "localhost",
+    "coming-up-roses.chez.io",
+    "coming-up-roses.co.uk"
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -65,9 +70,12 @@ STATIC_URL = "/site_media/static/"
 
 # Additional locations of static files
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static", "dist"),
+    os.path.join(PROJECT_ROOT, "static"),
+    "/var/www/html/coming-up-roses/static/"
 ]
 
+print PACKAGE_ROOT
+print PROJECT_ROOT
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 
 # List of finder classes that know how to find static files in
