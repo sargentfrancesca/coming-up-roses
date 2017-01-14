@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, url
 
 from client_site import views
-
+from django.contrib import admin
+admin.autodiscover()
 urlpatterns = patterns('',
 	url(r"^about/", views.AboutView.as_view(), name="about"),
 	)
