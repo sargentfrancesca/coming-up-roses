@@ -1,5 +1,5 @@
 from django.contrib import admin
-from client_side.models import *
+from client_site.models import *
 
 # Register your models here.
 
