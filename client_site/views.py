@@ -51,10 +51,16 @@ def contact(request):
         if form.is_valid():
             contact_name = form.cleaned_data['contact_name']
             contact_email = form.cleaned_data['contact_email']
-            contact_phone = form.cleaned_data['contact_phone']
+            contact_phone = str(form.cleaned_data['contact_phone'])
             content = form.cleaned_data['content']
+
+            message = '{} [Phone: {}]'.format(content, contact_phone)
+            print message
             
-            send_mail(contact_name, content, contact_email, ['contact@cominguproses.co.uk'])
+            try:
+                send_mail(contact_name, message, contact_email, ['contact@cominguproses.co.uk'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
             return redirect('success')
     
     return render(request, 'contact.html', {
