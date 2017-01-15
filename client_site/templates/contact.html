@@ -18,10 +18,12 @@
     </section>
 <section class="intro">
     <div class="container">
-    	<form role="form" action="" method="post">
+    	<form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Submit</button>
+            <div class="form-actions">
+              <button type="submit">Send</button>
+            </div>
         </form>
 	</div>
 </section>
