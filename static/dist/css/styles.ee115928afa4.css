@@ -64,7 +64,8 @@ span.pink {
 	background: #fff0ed;
 }
 
-.feature-columns>.btn {
+.feature-columns>.btn,
+.btn {
 	border: 0;
 	background: #CE5374;
 	color: white;

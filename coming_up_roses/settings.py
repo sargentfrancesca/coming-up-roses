@@ -70,8 +70,7 @@ STATIC_URL = "/site_media/static/"
 
 # Additional locations of static files
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static"),
-    "/var/www/html/coming-up-roses/static/"
+    os.path.join(PROJECT_ROOT, "static")
 ]
 
 print PACKAGE_ROOT
