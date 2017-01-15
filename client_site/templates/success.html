@@ -1,0 +1,30 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}pinax-project-account{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% load static %}
+            <div class="row-fluid">
+                <img class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" src='{% static "images/logo.png" %}' alt="My image"/>
+            </div>
+        </div>
+    </section>
+    <section class="intro">
+        <div class="container">
+            <h2 class="text-center">{% blocktrans %}Thank you for your query, I will reply as soon as possible.{% endblocktrans %}</h2>
+            <p class="lead text-center">
+                {% blocktrans %}You can also reach me on 
+                <a class="btn btn-default btn-lg" href="https://www.instagram.com/cominguprosesbeauty/" role="button" target="_new"> Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a> or <a class="btn btn-default btn-lg" href="#" role="button">Facebook <i class="fa fa-facebook-square" aria-hidden="true"></i></a>.{% endblocktrans %}
+            </p>
+        </div>
+    </section>
+
+
+{% endblock %}
