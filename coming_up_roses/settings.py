@@ -205,4 +205,4 @@ EMAIL_HOST = 'mail.gandi.net'
 EMAIL_HOST_USER = 'contact@cominguproses.co.uk'
 EMAIL_HOST_PASSWORD = 'BabaAlf!'
 EMAIL_USE_TLS = True 
-EMAIL_PORT = 465
+EMAIL_PORT = 587
