@@ -73,8 +73,7 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "static")
 ]
 
-print PACKAGE_ROOT
-print PROJECT_ROOT
+print "Project root", PROJECT_ROOT
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 
 # List of finder classes that know how to find static files in

@@ -10,6 +10,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.shortcuts import redirect
 from django.template import Context
 from django.template.loader import get_template
+from client_site.models import Category, Treatment
 
 class AboutView(generic.TemplateView):
     template_name = 'about.html'
@@ -26,10 +27,14 @@ class TreatmentView(generic.TemplateView):
     	return context
 
 class PriceView(generic.TemplateView):
-    template_name = 'about.html'
+    template_name = 'prices.html'
 
+    c = Category.objects.all()
+    for x in c:
+        print x.treatment_set.all()
     def get_context_data(self, **kwargs):
     	context = super(PriceView, self).get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
     	return context
 
 # class ContactView(generic.TemplateView):
