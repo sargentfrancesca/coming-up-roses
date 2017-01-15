@@ -197,3 +197,12 @@ ACCOUNT_USE_AUTH_AUTHENTICATE = True
 AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
+DEFAULT_FROM_EMAIL = 'contact@cominguproses.co.uk'
+EMAIL_HOST = 'mail.gandi.net'
+EMAIL_HOST_USER = 'contact@cominguproses.co.uk'
+EMAIL_HOST_PASSWORD = 'BabaAlf!'
+EMAIL_USE_TLS = True 
+EMAIL_PORT = 465

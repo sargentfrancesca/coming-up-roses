@@ -14,7 +14,7 @@ urlpatterns = [
     url(r"^about/", views.AboutView.as_view(), name="about"),
     url(r"^treatments/", views.TreatmentView.as_view(), name="treatments"),
     url(r"^prices/", views.PriceView.as_view(), name="prices"),
-    url(r"^contact/", views.ContactView.as_view(), name="contact"),
+    url(r"^contact/", views.contact, name="contact"),
     url(r"^admin/", include(admin.site.urls)),
     url(r"^account/", include("account.urls")),
 ]

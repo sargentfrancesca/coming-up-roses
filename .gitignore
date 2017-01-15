@@ -5,3 +5,5 @@ site_media/
 bin/
 lib/
 local/
+*settings.py
+

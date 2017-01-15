@@ -1,0 +1,30 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}pinax-project-account{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% load static %}
+            <div class="row-fluid">
+                <img class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" src='{% static "images/logo.png" %}' alt="My image"/>
+            </div>
+        </div>
+    </section>
+<section class="intro">
+    <div class="container">
+    	<form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+	</div>
+</section>
+
+
+{% endblock %}
