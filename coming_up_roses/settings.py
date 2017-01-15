@@ -200,7 +200,6 @@ AUTHENTICATION_BACKENDS = [
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
-DEFAULT_FROM_EMAIL = 'contact@cominguproses.co.uk'
 EMAIL_HOST = 'mail.gandi.net'
 EMAIL_HOST_USER = 'contact@cominguproses.co.uk'
 EMAIL_HOST_PASSWORD = 'BabaAlf!'
