@@ -71,7 +71,7 @@ def contact(request):
                 "New contact form submission",
                 content,
                 "Coming Up Roses Queries" +'',
-                ['bellachezella@gmail.com'],
+                ['contact@cominguproses.co.uk'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
