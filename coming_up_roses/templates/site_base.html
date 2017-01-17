@@ -14,14 +14,27 @@
 	    background: #CE5374;
 	    color: white;
 	}
+
+    .table {
+        background-color: #fff;
+    }
+
+    thead {
+        background-color: #DA9F93;
+    }
+    
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        border-color: #CE5374;
+    }
+
+    .badge {
+        background-color: #DA7B28;
+        border-radius: 0px;
+        font-size: 14px;
+    }
+   
 	</style>
 {% endblock %}
-
-
-<!-- {% block extra_head_base %}
-    {% block extra_head %}{% endblock %}
-{% endblock %} -->
-
 
 {% block footer %}
     {% include "_footer.html" %}
