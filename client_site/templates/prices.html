@@ -21,7 +21,7 @@
     	{% for category in categories %}
             <section class="category">
                 <h2>{{ category.category_name }}</h2>
-                <p class="col-xs-12">{{ category.category_description }}</p>
+                <p class="lead-desc">{{ category.category_description }}</p>
                 {% for treatment in category.treatment_set.all %}
                     <section class="treatment">           
                         <strong class="treatment">{{ treatment.treatment_name }} &nbsp; <span class="badge">£{{treatment.treatment_price}}</span></strong>
