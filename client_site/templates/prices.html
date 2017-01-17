@@ -32,7 +32,7 @@
             {% for treatment in category.treatment_set.all %}                
                     <tr>
                         <td class="col-md-3 col-xs-3"><strong>{{ treatment.treatment_name }}</strong></td>
-                        <td class="col-md-8 col-xs-12">{{ treatment.treatment_description }}</td>
+                        <td class="col-md-8 col-xs-12">{{ treatment.treatment_descripton }}</td>
                         <td class="col-md-1 col-xs-12"><span class="badge">£{{treatment.treatment_price}}</span></td>
                     </tr>                
             {% endfor %}
