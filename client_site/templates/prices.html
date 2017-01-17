@@ -19,24 +19,16 @@
 <section class="intro">
     <div class="container">
     	{% for category in categories %}
-            <h2>{{ category.category_name }}</h2>
-            <p class="col-xs-12">{{ category.category_description }}</p>
-            <table class="table col-xs-12">
-            <thead>
-                <tr>
-                    <th>Treatment</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            {% for treatment in category.treatment_set.all %}                
-                    <tr>
-                        <td class="col-md-3 col-xs-3"><strong>{{ treatment.treatment_name }}</strong></td>
-                        <td class="col-md-8 col-xs-12">{{ treatment.treatment_descripton }}</td>
-                        <td class="col-md-1 col-xs-12"><span class="badge">£{{treatment.treatment_price}}</span></td>
-                    </tr>                
-            {% endfor %}
-            </table>
+            <section class="category">
+                <h2>{{ category.category_name }}</h2>
+                <p class="col-xs-12">{{ category.category_description }}</p>
+                {% for treatment in category.treatment_set.all %}
+                    <section class="treatment">           
+                        <strong class="treatment">{{ treatment.treatment_name }} &nbsp; <span class="badge">£{{treatment.treatment_price}}</span></strong>
+                        <p>{{ treatment.treatment_descripton }}</p>
+                    </section>
+                {% endfor %}
+            </section>
         {% endfor %}
 	</div>
 </section>
