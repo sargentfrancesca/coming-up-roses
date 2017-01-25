@@ -6,14 +6,31 @@
 
 
 {% block styles %}
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
     <link href="{% static "css/site.css" %}" rel="stylesheet" />
     <link href="{% static "css/styles.css" %}" rel="stylesheet" />
+    
     <style type="text/css">
-	.btn-nomargin {
-	    border: 0;
-	    background: #CE5374;
-	    color: white;
-	}
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn-nomargin,
+    .btn, 
+    button {
+        border-radius: 0px;
+        border: 0;
+        background: #CE5374;
+        color: white;
+    }
+
+    .btn-nomargin:hover,
+    .btn:hover, 
+    button:hover {
+        background: #DA7B28;
+        color: white;
+    }
 
     .table {
         background-color: #fff;
@@ -46,7 +63,92 @@
     p.lead-text {
         font-size: 18px;
     }
-   
+
+    .slider-nav ul,
+    .slider-nav ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline;
+    }
+
+    .slider-nav ul li {
+        border: 0px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+    }
+    ul.slick_dots>li button{
+        border: 0px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+    }
+
+    .slick-slide {
+        background-color: #DA9F93;
+        margin-right: 10px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .slider img {
+        height: 150px;
+        width: auto;
+        padding: 0;
+        margin: 0px auto;
+    }
+
+    .feature-image img {
+        width: 200px;
+    }
+
+    form label {
+        width: 30%;
+    }
+
+    form input,
+    form textarea {
+        width: 60%;
+        box-shadow: 0;
+        border: 1px solid #ccc;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        outline: 0;
+        border: 1px solid #FF6978;
+    }
+
+    form button {
+        margin-top: 30px;
+        width: 30%;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.3333333;
+    }
+
+    @media (max-width: 600px) {
+    .slick-slide {
+        background-color: #DA9F93;
+        margin-right: 10px;
+        padding: 10px 0px 10px 0px;
+        }
+
+    .slider img {
+        height: 200px;
+        width: auto;
+        padding: 0;
+        margin: 0px auto;
+    }
+
+    .feature-image img {
+        width: 170px;
+        margin-left: 20px;
+    }
+
+    }
+
 	</style>
 {% endblock %}
 
@@ -59,6 +161,7 @@
     <script src="{% static "js/site.js" %}"></script>
     <script src="https://use.typekit.net/cri2nxi.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 {% endblock %}
 
 {% block extra_body_base %}

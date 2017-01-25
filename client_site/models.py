@@ -27,10 +27,11 @@ class MailingList(models.Model):
 	def __str__(self):
 		return "%s: %s" % (self.user_name, self.user_email)
 
-class Images(models.Model):
+class Image(models.Model):
 	image_filename = models.CharField(max_length=100)
 	image_title = models.CharField(max_length=64)
 	image_description = models.TextField(null=True)
+	image_folder = models.CharField(max_length=100, default="photo_shoot")
 
 	def __str__(self):
 		return "%s: %s [%s]" % (self.image_filename, self.image_title, self.image_description)

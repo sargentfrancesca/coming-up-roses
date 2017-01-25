@@ -14,6 +14,7 @@ urlpatterns = [
     url(r"^about/", views.AboutView.as_view(), name="about"),
     url(r"^treatments/", views.TreatmentView.as_view(), name="treatments"),
     url(r"^prices/", views.PriceView.as_view(), name="prices"),
+    url(r"^policy/", views.PolicyView.as_view(), name="policy"),
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^success/$', views.success, name='success'),
     url(r"^admin/", include(admin.site.urls)),
