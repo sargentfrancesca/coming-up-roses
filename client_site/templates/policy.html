@@ -1,0 +1,95 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}Coming up Roses - About{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% load static %}
+            <div class="row-fluid">
+                <img class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" src='{% static "images/logo.png" %}'/>
+            </div>
+        </div>
+    </section>
+<section class="intro">
+    <div class="container">
+    <p class="col-lg-10 col-lg-offset-1 text-justify">
+    It is important that you inform me at the time of booking of any health issues or medical conditions I may need to be aware of, including pregnancy. I will then be able to advise you of treatments suitable for you</p>
+
+    <p class="col-lg-10 col-lg-offset-1 text-justify">
+		Due to travel costs, a minimum treatment cost of £10 is required. Exceptions may be made at my own discretion, taking into account location and availability on the day of booking.</p>
+
+		<p class="col-lg-10 col-lg-offset-1 text-justify">
+		I cover a 7 mile radius of GL16 8LJ free of charge but any distance further than this will incur an additional 50p per mile.</p>
+
+		<p class="col-lg-10 col-lg-offset-1 text-justify">
+		Please aim to give at least 24 hours notice if you need to cancel so the appointment can be offered to someone else.
+		</p>
+
+		<p class="col-lg-10 col-lg-offset-1 text-justify">
+		Payment can be made by cash, cheque or a valid gift voucher. Unfortunately I am unable to accept card payments, bank transfers or cheques. If the total treatment cost equals less than a redeemable gift voucher in monetary value, the remaining balance will be written as a new gift voucher. Gift vouchers are non refundable and must be redeemed within one year. Please have your gift voucher ready before your appointment.
+		</p>
+	</div>
+</section>
+<section class="gallery row">
+    <div class="slider col-md-10 col-md-offset-1">
+        {% for image in images %}
+            <div><img class="" src='{% static "images/"|add:image.image_folder|add:"/"|add:image.image_filename %}'/></div>
+        {% endfor %}
+    </div>
+    <div class="slider-nav col-md-8 col-md-offset-2">
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $('.slider').slick({
+        arrows: false, 
+        centerMode: true,
+        autoplay: true,
+        infinite: true,
+        arrows: true,
+        responsive: [
+        {
+          breakpoint: 2300,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 753,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 611,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots : false
+          }
+        }]
+    });
+</script>
+{% endblock %}

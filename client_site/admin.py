@@ -5,3 +5,5 @@ from client_site.models import *
 
 admin.site.register(Treatment)
 admin.site.register(Category)
+admin.site.register(MailingList)
+admin.site.register(Image)
