@@ -12,13 +12,13 @@
             {% include "_messages.html" %}
             {% load static %}
             <div class="row-fluid">
-                <img class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" src='{% static "images/logo.png" %}'/>
+                <img class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12" src='{% static "images/logo.png" %}'/>
             </div>
         </div>
     </section>
 <section class="intro">
     <div class="container">
-      <h2 class="text-center">About Coming Up Roses</h2>
+      <h2 class="text-center" style="font-family: 'quimby-mayoral',sans-serif;">About Coming Up Roses</h2>
     	<p class="lead col-lg-10 col-lg-offset-1 text-justify">
 		If you are looking for salon quality, professional treatments made available in the comfort of your own home, you are in the right place.</p>
     <div class="row">
@@ -111,4 +111,8 @@
         }]
     });
 </script>
+<script src="{% static "js/site.js" %}"></script>
+    <script src="https://use.typekit.net/cri2nxi.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 {% endblock %}

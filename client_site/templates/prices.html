@@ -2,7 +2,7 @@
 
 {% load i18n %}
 
-{% block head_title %}pinax-project-account{% endblock %}
+{% block head_title %}Coming Up Roses - Treatments and Prices{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
@@ -21,10 +21,10 @@
     	{% for category in categories %}
             <section class="category col-xs-10 col-xs-offset-1">
                 <h2>{{ category.category_name }}</h2>
-                <p class="lead-desc">{{ category.category_description }}</p>
+                <p class="lead-desc text-justify">{{ category.category_description }}</p>
                 {% for treatment in category.treatment_set.all %}
                     <section class="treatment">           
-                        <strong class="treatment">{{ treatment.treatment_name }} &nbsp; <span class="badge">£{{treatment.treatment_price}}</span></strong>
+                        <strong class="treatment col-lg-3 col-xs-6">{{ treatment.treatment_name }} </strong> &nbsp; <span class="badge">£{{treatment.treatment_price}}</span>
                     </section>
                 {% endfor %}
             </section>
