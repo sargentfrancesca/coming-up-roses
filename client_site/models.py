@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
+# copy nano lib/python2.7/site-packages/pinax_theme_bootstrap folder
 
 class Category(models.Model):
 	category_name = models.CharField(max_length=100)

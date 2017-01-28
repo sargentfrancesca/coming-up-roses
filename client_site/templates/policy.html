@@ -2,15 +2,14 @@
 
 {% load i18n %}
 
-{% block head_title %}Coming up Roses - About{% endblock %}
+{% block head_title %}Coming up Roses - Policy{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
 {% block body_base %}
 <section class="jumbotron">
         <div class="container">
-            {% include "_messages.html" %}
-            {% load static %}
+            <!-- {% load static %} -->
             <div class="row-fluid">
                 <img class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" src='{% static "images/logo.png" %}'/>
             </div>
@@ -45,51 +44,4 @@
     <div class="slider-nav col-md-8 col-md-offset-2">
     </div>
 </section>
-
-{% endblock %}
-
-{% block scripts %}
-<script>
-    $('.slider').slick({
-        arrows: false, 
-        centerMode: true,
-        autoplay: true,
-        infinite: true,
-        arrows: true,
-        responsive: [
-        {
-          breakpoint: 2300,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 753,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 611,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots : false
-          }
-        }]
-    });
-</script>
 {% endblock %}

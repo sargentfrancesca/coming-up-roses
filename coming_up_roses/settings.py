@@ -12,7 +12,7 @@ DATABASES = {
         "ENGINE": "django.contrib.gis.db.backends.mysql",
         "NAME": "roses",
         "USER" : 'root',
-        "PASSWORD" : 'sincynk1988',
+        "PASSWORD" : 'jeh5t',
         "HOST" : 'localhost'
     }
 }
