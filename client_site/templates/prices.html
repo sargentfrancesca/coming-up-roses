@@ -24,7 +24,7 @@
                 <p class="lead-desc text-justify">{{ category.category_description }}</p>
                 {% for treatment in category.treatment_set.all %}
                     <section class="treatment">           
-                        <strong class="treatment col-lg-3 col-xs-6">{{ treatment.treatment_name }} </strong> &nbsp; <span class="badge">£{{treatment.treatment_price}}</span>
+                        <strong class="treatment col-lg-3 col-sm-6 col-xs-7">{{ treatment.treatment_name }} </strong> &nbsp; <span class="badge">£{{treatment.treatment_price}}</span>
                     </section>
                 {% endfor %}
             </section>
