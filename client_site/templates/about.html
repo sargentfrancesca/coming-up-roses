@@ -18,10 +18,11 @@
     </section>
 <section class="intro">
     <div class="container">
+      <h2 class="text-center">{% blocktrans %}About Coming Up Roses{% endblocktrans %}</h2>
     	<p class="lead col-lg-10 col-lg-offset-1 text-justify">
 		If you are looking for salon quality, professional treatments made available in the comfort of your own home, you are in the right place.</p>
     <div class="row">
-      <div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-3 feature-image">
+      <div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-1 feature-image">
         <img src="{% static 'images/photo_shoot/0009.jpg' %}">
       </div>
       <div class="col-lg-8">
@@ -47,9 +48,11 @@
 </section>
 <section class="button-links">
   <div class="container">
-    <a class="btn btn-default btn-lg col-lg-3 col-md-5 col-sm-5 col-xs-12 col-sm-offset-2 col-lg-offset-3" href="{% url 'prices' %}" role="button">Treatment and Price List</a>
+    <a class="btn btn-default btn-lg col-lg-3 col-md-4 col-sm-4 col-xs-12 col-sm-offset-1 col-lg-offset-2" href="{% url 'prices' %}" role="button">Treatment and Price List</a>
 
     <a class="btn btn-default btn-lg col-lg-2 col-md-3 col-sm-3 col-xs-12" href="{% url 'contact' %}" role="button">Contact Me</a>
+
+    <a class="btn btn-default btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-12" href="{% url 'home' %}" role="button">Home</a>
   </div>
 </section>
 <section class="gallery row">
